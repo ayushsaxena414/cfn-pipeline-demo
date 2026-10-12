@@ -37,7 +37,7 @@ Resources:
         Fn::Base64: !Sub |
           #!/bin/bash
           dnf install -y httpd
-          echo "<h1>This is the ${Environment} environment</h1>" > /var/www/html/index.html
+          echo "<body style='background-color:#1e90ff;color:white'><h1>This is the ${Environment} environment</h1></body>" > /var/www/html/index.html
           systemctl enable --now httpd
       Tags:
         - Key: Name
